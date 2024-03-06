@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Results from "./components/Results";
 const API_KEY = process.env.tmdbAPI;
 

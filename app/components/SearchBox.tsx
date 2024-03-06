@@ -7,7 +7,7 @@ const SearchBox = () => {
   const router = useRouter();
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    if (!search) return;
+    if (!search) return router.push('/');
     router.push(`/search/${search}`);
   };
 
@@ -24,7 +24,7 @@ const SearchBox = () => {
         value={search}
       ></input>
       <button
-        disabled={!search}
+        // disabled={!search}
         className="text-amber-700 cursor-pointe disabled:text-grey-400"
         type="submit"
       >
