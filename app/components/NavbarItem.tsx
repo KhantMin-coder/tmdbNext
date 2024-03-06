@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { useSearchParams } from "next/navigation";
 
-const NavbarItem = ({ title, param }: any) => {
+const NavbarItem = ({ title, param }: { title: string; param: string }) => {
   const searchParams = useSearchParams();
   //   const [searchParams, setSearchParams] = useState<string>("");
   const genre = searchParams.get("genre");

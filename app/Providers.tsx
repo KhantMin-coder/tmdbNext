@@ -3,7 +3,7 @@ import { ThemeProvider } from "next-themes";
 import React from "react";
 
 interface Providers {
-  children: any;
+  children: React.ReactNode;
 }
 
 const Providers = ({ children }: Providers) => {

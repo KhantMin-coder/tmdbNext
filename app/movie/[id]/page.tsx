@@ -1,11 +1,18 @@
 import Image from "next/image";
 import React from "react";
 
-export default async function MoviePage({ params }: any) {
+interface MoviePageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default async function MoviePage({ params }: MoviePageProps) {
   const movieId = params.id;
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.tmdbAPI}`
   );
+
   const movie = await res.json();
   return (
     <div className="w-full">

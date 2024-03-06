@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 
-const Error = ({ error, reset }: any) => {
+const Error = ({ error, reset }: { error: string; reset: () => void }) => {
   useEffect(() => {
     console.log(error);
   }, [error]);
@@ -9,7 +9,9 @@ const Error = ({ error, reset }: any) => {
   return (
     <div className="text-center mt-10 ">
       <h1>Something went wrong</h1>
-      <button className="hover:text-amber-600" onClick={() => reset()}>Try Again</button>
+      <button className="hover:text-amber-600" onClick={() => reset()}>
+        Try Again
+      </button>
     </div>
   );
 };

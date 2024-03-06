@@ -10,7 +10,6 @@ const SearchPage = async ({ params }: any) => {
   const data = await res.json();
 
   const result = data.results;
-  console.log(result.length)
   return (
     <div>
       {result && result.length === 0 && <h1>No Results Found</h1>}
